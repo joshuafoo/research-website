@@ -21,6 +21,8 @@ a:hover { color: #3156a0; }
 .profile .social-links a { display: inline-flex; align-items: center; gap: .5em; color: #494e52; }
 .profile .social-links a:hover { color: #1b3580; }
 .profile .social-links img, .profile .social-links svg { display: block; flex: none; width: 1em; height: 1em; max-width: 1em; opacity: .7; }
+.profile .location { display: flex; align-items: center; gap: .5em; }
+.profile .location svg { flex: none; width: 1em; height: 1em; }
 .social-links a:focus-visible { outline: 2px solid #1b3580; outline-offset: 3px; }
 .content { max-width: 850px; min-width: 0; line-height: 1.5; }
 .content p, .content li { font-size: 1rem; }
@@ -29,11 +31,18 @@ a:hover { color: #3156a0; }
 .content section { scroll-margin-top: 1rem; }
 .intro h2 { border: 0; padding: 0; margin-top: 0; font-size: 1.08rem; }
 .content li { margin-bottom: .65rem; }
+.intro li { margin-bottom: .3rem; }
+.intro li p { margin: 0; }
 .publications p { margin: 0 0 1rem; }
 .team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin: 1.2rem 0; }
 .team-grid figure, .gallery-grid figure { margin: 0; }
-.team-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.team-grid img { width: 70%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
 .team-grid figcaption, .gallery-grid figcaption { font-family: inherit; font-size: 1rem; line-height: 1.5; margin-top: .45rem; }
+.team-lead { display: grid; grid-template-columns: minmax(0, 187px) minmax(0, 1fr); align-items: start; gap: 1.5rem; margin: 1.2rem 0; }
+.team-lead figure { margin: 0; }
+.team-lead img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.team-lead figcaption { font-size: 1rem; line-height: 1.5; margin-top: .45rem; }
+.team-lead p { margin-top: 0; }
 .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 .gallery-grid img { display: block; width: 100%; height: auto; border-radius: 0; }
 .news-year { border-bottom: 1px solid #e5e5e5; }
@@ -52,4 +61,5 @@ a:hover { color: #3156a0; }
 }
 @media (max-width: 430px) {
   .gallery-grid { grid-template-columns: 1fr; }
+  .team-lead { grid-template-columns: minmax(0, 115px) minmax(0, 1fr); gap: 1rem; }
 }
