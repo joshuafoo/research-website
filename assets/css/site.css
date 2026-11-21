@@ -1,0 +1,47 @@
+/* Layout adaptations for the AcademicPages stylesheet. */
+html { scroll-behavior: smooth; }
+body { color: #494e52; }
+a { color: #1b3580; }
+a:hover { color: #3156a0; }
+.masthead__inner-wrap { max-width: 1280px; }
+.site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem 1.5rem; }
+.site-nav a { color: #6f777d; text-decoration: none; font-size: .82rem; }
+.site-nav a:hover { color: #1b3580; }
+.site-nav .site-name { color: #494e52; font-weight: 700; font-size: 1rem; margin-right: auto; }
+.layout { max-width: 1280px; margin: 2.2rem auto 0; padding: 0 1.5rem; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 3rem; }
+.profile { font-size: .8rem; }
+.profile img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; padding: 5px; border: 1px solid #e8e8e8; }
+.profile h1 { font-size: 1.08rem; margin: .8rem 0 .35rem; }
+.profile p { margin: 0 0 .75rem; line-height: 1.5; }
+.profile ul { list-style: none; margin: 1.15rem 0; padding: 0; }
+.profile li { margin: .4rem 0; }
+.profile a { text-decoration: none; }
+.content { max-width: 850px; min-width: 0; line-height: 1.6; }
+.content p, .content li { font-size: .88rem; }
+.content h2 { font-size: 1.28rem; margin: 2.3rem 0 .9rem; padding-bottom: .35rem; border-bottom: 1px solid #f2f3f3; }
+.content h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+.content section { scroll-margin-top: 1rem; }
+.intro h2 { border: 0; padding: 0; margin-top: 0; font-size: 1.08rem; }
+.content li { margin-bottom: .65rem; }
+.publications p { margin: 0 0 1rem; }
+.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin: 1.2rem 0; }
+.team-grid figure, .gallery-grid figure { margin: 0; }
+.team-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.team-grid figcaption, .gallery-grid figcaption { font-family: inherit; font-size: .88rem; line-height: 1.6; margin-top: .45rem; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.page__footer { margin-top: 3rem; }
+.page__footer footer { max-width: 1280px; padding: 1.5rem; margin: auto; font-size: .7rem; }
+@media (max-width: 760px) {
+  .layout { display: block; padding: 0 1rem; margin-top: 1.5rem; }
+  .profile { display: grid; grid-template-columns: 90px 1fr; column-gap: 1rem; margin-bottom: 2rem; }
+  .profile img { width: 90px; height: 90px; grid-row: span 3; }
+  .profile h1 { margin-top: .1rem; }
+  .profile ul { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin: .75rem 0 0; }
+  .profile li { margin: 0; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-nav .site-name { width: 100%; }
+}
+@media (max-width: 430px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
