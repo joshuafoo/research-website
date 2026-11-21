@@ -7,19 +7,21 @@ manager, or a build step.
 
 ## Preview and edit
 
-Open `index.html` in a browser. It contains the site's content:
+Open `index.html` in a browser. The site's content is in four HTML files:
 
 - **Biography:** edit the text in `<section class="intro">`.
 - **Selected publications:** add or edit a `<p>...</p>` entry in the
   `<section class="publications">` section. The Google Scholar link provides
   the complete list.
-- **News:** add an `<li><p>...</p></li>` inside the appropriate year's list in
-  `<section id="news">`; add a new year heading and list when needed.
-- **Team:** add or edit a `<figure>` inside the relevant category in
+- **News (`news.html`):** add an `<li><p>...</p></li>` inside the appropriate
+  year's list. For a new year, copy a `<details class="news-year">` block,
+  change its `<summary>` year, and replace its list entries. The `open`
+  attribute makes a year expanded when the page loads.
+- **Team (`team.html`):** add or edit a `<figure>` inside the relevant category in
   `<section id="team">`. Place new photos in `assets/images/` and point the
   image's `src` to the new file.
-- **Gallery:** add a `<figure>` in `<section id="gallery">`. Each circular
-  preview links to the full photo, so readers can see the uncropped image.
+- **Gallery (`gallery.html`):** add a `<figure>` in `<section id="gallery">`.
+  Each rectangular preview links to the full photo.
 - **Contact:** edit the links in `<section id="contact">`.
 
 The easiest way to add an item is to copy an existing similar entry and
@@ -43,8 +45,13 @@ After publishing, you can update text directly on GitHub: open `index.html`
 in the repository, click the pencil icon, make your changes, then choose
 **Commit changes**. GitHub Pages will rebuild automatically. To add photos,
 use **Add file → Upload files** in the `assets/images` folder, then update
-the relevant image path in `index.html`. Allow a few minutes for changes to
+the relevant image path in `team.html` or `gallery.html`. Allow a few minutes for changes to
 appear, and refresh the published page.
+
+The navigation and profile sidebar appear in each HTML file. If you change
+their content, update all four files to keep the pages consistent. The social
+logos in `assets/icons/` are Simple Icons, distributed under the license in
+that folder.
 
 The AcademicPages/Minimal Mistakes stylesheet is distributed under the MIT
 license in `LICENSE-AcademicPages.txt`. Photographs and biographical content
